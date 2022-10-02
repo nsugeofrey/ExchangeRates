@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta>
+      <title>Installation Page</title>
+      <style>
+      body {
+       width: 90%;
+       height: 90%;
+       background-color: rgba(215, 22, 138, 0.218);
+      }
+    /*body {
+      display:table-cell;
+      vertical-align:middle;
+    }*/
+    form {
+      height: auto;
+      width: auto;
+      border-radius: 20px 20px 20px 20px;
+      background: rgb(175, 207, 87);
+      display:table;/*shrinks to fit content*/
+      margin:auto;
+      box-sizing: border-box;
+    }
+    input[type=text], input[type=password], input[type=email],
+    input[type=date], input[type=time], input[type=number]{
+    width:80%;
+    border-radius: 10px;
+    background-color: rgb(131, 127, 127);
+    padding: 12px 20px;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+  input[type=submit]{
+    width: auto;
+    border-radius: 0px;
+    align-content: center;
+    background-color: rgb(151, 153, 29);
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .check label:after{ 
+      content:"*";
+      color: red;
+       }
+      </style>
+  </head>
+  <body>
+    <h1 align="center">Site Visit Report</h1>
+    <h3 align="center">---Date---</h3>
+    <form action="../nono.php" method="POST">
+      <table>
+      <tr>
+        <td><h4>Site Details/General Site Information:</h4></td>
+      </tr>
+      <tr>
+        <td align="center"><div class="check"><label for="installationtype">Purpose/Type Of Installation:</label></div></td>
+        <td><select id="installationtype" name="purpose">
+        <option value="select">--Select--</option>
+        <option value="newinstallation">New Installation</option> 
+        <option value="Maintenance">Maintenance</option> 
+        <option value="hwrecovery">Hardware Recovery</option> 
+      </select></td>
+    </tr>
+      <tr>
+        <td align="center"><div class="check"><label for="customer">Customer Name:</label></div></td>
+        <td align="left"><input type="text" name="customer" id="customer" required></td>
+      </tr>
+      <tr>
+        <td align="center"><div class="check"><label for="sitename">Site Name:</label></div></td>
+        <td align="left"><input type="text" name="sitename" id="sitename" required></td>
+        <td align="center"><div class="check"><label for="siteid">Site ID:</label></div></td>
+        <td align="left"><input type="text" name="siteid" id="siteid" required></td>
+      </tr>
+      <tr>
+        <td align="center"><div class="check"><label for="code">Intrusion Code:</label></div></td>
+        <td align="left"><input type="number" name="code" id="code" required></td>
+      </tr>
+      <tr>
+        <td align="center"><div class="check"><label for="visitdate">Visit Date:</label></div></td>
+        <td align="left"><input type="date" name="visitdate" id="visitdate" required></td>
+        <tr>
+          <td align="center"><div class="check"><label for="time">Time In:</label></div></td>
+          <td align="left"><input type="time" name="timein" id="time" required></td>
+        </tr>
+        <tr>
+          <td align="center"><div class="check"><label for="time">Time Out:</label></div></td>
+          <td align="left"><input type="time" name="timeout" id="time" required></td>
+        </tr>
+        <tr>
+          <td align="center"><div class="check"><label for="technician">Installed By:</label></div></td>
+          <td align="left"><input list="technician"type="text" name="technician" id="technician" required></td>
+          <datalist id="technician" value="techname">
+            <option value="Lawrence"></option>
+            <option value="Francis"></option>
+            <option value="Martin"></option>
+            <option value="Richard"></option>
+          </datalist>
+        </tr>
+        <tr>
+          <td align="center"><label for="gps">Site GPS</label></td>
+          </tr>
+          <tr>
+          <th><div class="check"><label for="latitude">latitude:</label></div></th>
+          <th align="left"><input type="number" name="latitude" id="latitude" required>
+          </th>
+          <th><div class="check"><label for="longtitude">longtitude:</label></div></th>
+          <th align="left"><input type="number" name="longtitude" id="longtitude" required>
+          </th>
+        </tr>
+        <tr>
+          <td><label for="comments">General Site conditions</label></td>
+          <td><textarea id="comments" rows="5" cols="40"></textarea></td>
+        </tr>
+        <tr>
+          <td><h4>Picture Section</h4></td>
+          </tr>
+          <tr>
+          <td><img src="../PROJECT/PICTURES/uganda.png" style="width:100px; height:50px" alt="Site View image"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

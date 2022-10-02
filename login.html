@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta>
+    <title>JOB CARD</title>
+    <style>
+  /*body, html {   
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display:table;}*/
+    body {
+     width: 90%;
+     height: 90%;
+     background-color: rgba(215, 22, 138, 0.218);
+     
+    }
+  /*body {
+    display:table-cell;
+    vertical-align:middle;
+  }*/
+  form {
+    border-radius: 20px 20px 20px 20px;
+    background: rgb(175, 207, 87);
+    display:table;/*shrinks to fit content*/
+    margin:auto;
+    box-sizing: border-box;
+  }
+  input[type=text], input[type=date], input[type=email], input[type=password]{
+  width: auto;
+  border-radius: 10px;
+  background-color: rgb(131, 127, 127);
+  padding: 12px 20px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+input[type=submit]{
+  width: auto;
+  border-radius: 0px;
+  align-content: center;
+  background-color: rgb(151, 153, 29);
+  padding: 12px 20px;
+  margin: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.check label:after { 
+    content:"*";
+    color: red;
+     }
+    </style>
+  </head>
+  <body>
+    <form action="/adddd" method="POST">
+        <h1>Login Into Your Account</h1>
+      <table>
+      <tr>
+        <td><input type="text" id="newuser" name="username" placeholder="Email or Mobile Number" required></td>
+      </tr>
+      <tr>
+        <td><input type="password" id="password" name="password" placeholder="Enter Password"></td>
+      </tr>
+      <tr>
+        <td><strong style="color:blue;">Forgot Password?</strong></td>
+      </tr>
+      <tr>
+        <td><input type="submit" name="submit" value="Log-In"></td>
+      </tr>
+      <tr>
+        <td align="center"><h2>SignUp Or Create An Account</h2></td>
+      </tr>
+      <tr>
+        <tr>
+          <td align="right"><div class="check"><label for="text">First Name:</label></div></td>
+          <td align="left"><input type="text" name="firstname" id="text" required></td>
+        </tr>
+        <tr>
+          <td align="right"><div class="check"><label for="lastname">Last Name:</label></div></td>
+          <td align="left"><input type="text" id="lastname" name="lastname" required></td>
+      </tr>
+      <tr>
+        <td align="right"><div class="check"><label for="email">Email:</label></div></td>
+        <td align="left"><input type="email" name="email" id="email" required></td>
+      </tr>
+     <tr>
+      <tr>
+        <td align="right"><div class="check"><label for="password">Password:</label></div></td>
+        <td align="left"><input type="password" name="password" id="password" required></td>
+      </tr>
+    </table>
+  </form>
+  </body>
+</html>
